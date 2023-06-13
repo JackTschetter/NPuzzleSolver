@@ -84,7 +84,7 @@ public class SlidePuzzleGUI extends JPanel implements ItemListener {
                 /* Solve the 8 puzzle using informed search with manhattan_distance. */
                 solutionSequence = a.astar("manhattan_distance", initState);
                 System.out.println(solutionSequence);
-                startButton.addActionListener(new solveAction(solutionSequence));
+                nextMoveButton.addActionListener(new solveAction(solutionSequence));
                 // nextMoveButton.doClick(); //Dont want to start when heuristic chosen. Only after startButton clicked.
             }
         } else if (e.getSource() == c2) {
@@ -97,7 +97,7 @@ public class SlidePuzzleGUI extends JPanel implements ItemListener {
                 solutionSequence = a.astar("num_wrong_tiles", initState);
                 /* Possible loop/recursion structure here. */
                 System.out.println(solutionSequence);
-                startButton.addActionListener(new solveAction(solutionSequence));
+                nextMoveButton.addActionListener(new solveAction(solutionSequence));
                 // nextMoveButton.doClick(); //Dont want to start when heuristic chosen. Only after startButton clicked.
             }
         }
@@ -193,7 +193,7 @@ public class SlidePuzzleGUI extends JPanel implements ItemListener {
                 System.out.println("actionPerformed");
                 // System.out.println("Solved?" + _puzzleModel.isGameOver());
 
-                while (!_puzzleModel.isGameOver()) {
+                // while (!_puzzleModel.isGameOver()) {
                     // puzzleGraphics.repaint();
                     if(current_position >= solutionSequence.length()) {
                         return;
@@ -282,7 +282,7 @@ public class SlidePuzzleGUI extends JPanel implements ItemListener {
                     // puzzleGraphics.repaint(); //Move or repeat this part?
                     current_position++;
                     System.out.println("Current Position Is : " + current_position);
-                }
+                // }
                 puzzleGraphics.repaint();
             } //Close actionPerformed
         }//Close inner class
