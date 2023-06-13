@@ -1,22 +1,8 @@
 /* Class to create a GUI for the N-puzzle
  * This class creates a panel containing subpanels
  * One subpanel contains the controls, the other contains the puzzle board
- * Created by Jack Tschetter x500 : tsche043
+ * Created entirely by Jack R. Tschetter for the class CSCI 5511 at umn.
  */
-
- /*References
- https://stackoverflow.com/questions/18101615/how-to-put-a-particular-thread-to-sleep
- https://www.javatpoint.com/java-thread-currentthread-method
- */
-
-/*TODO :
-* Read up on all threads work in java.
-* Read up on runnable, possibly overwrite the run method.
-* Name the threads.
-* Once heuristic is chosen make the box uncheckable.
-* Alert the user when the NPuzzle is solved.
-* Finally clean up unnecessary comments before publishing on my github.
-*/
 
 package ui;
 
@@ -51,7 +37,7 @@ public class SlidePuzzleGUI extends JPanel implements ItemListener {
         _puzzleModel = new SlidePuzzleModel(3, 3, initState);
 
         /**Create a button. */
-        startButton = new JButton("Start Game");
+        nextMoveButton = new JButton("Next Move");
 
         c2 = new JCheckBox("Num Wrong Moves");
         c1 = new JCheckBox("Manhattan Distance");
@@ -64,7 +50,7 @@ public class SlidePuzzleGUI extends JPanel implements ItemListener {
         controlPanel.setLayout(new FlowLayout(15, 15, 15));
         controlPanel.add(c1);
         controlPanel.add(c2);
-        controlPanel.add(startButton);
+        controlPanel.add(nextMoveButton);
 
         /** Create graphics panel */
         puzzleGraphics = new GraphicsPanel();
