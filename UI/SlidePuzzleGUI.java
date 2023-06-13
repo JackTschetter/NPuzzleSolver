@@ -23,7 +23,7 @@ public class SlidePuzzleGUI extends JPanel implements ItemListener {
 
     static JCheckBox c1, c2;
 
-    static JButton startButton;
+    static JButton nextMoveButton;
 
     String solutionSequence;
 
