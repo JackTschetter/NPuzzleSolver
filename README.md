@@ -31,4 +31,4 @@ Have fun experimenting with different other command line arguments/initial board
 Down, Right, Right, Up, Left, Left, Down, Right, Right, Up, Left, Down
 
 ### Future Changes
-I am working on automating the game play so that a user can just click a startGame button which will go through the steps automatically without the user having to click next move. I am also working on a pop up that would allow the user to choose the size of the N-Puzzle. Lastly I am currently working on designing and implementing an algorithm to efficiently solve N-Puzzles of arbitrarily large size, something analogous to Simplified Memory Bounded A*.
+I am working on automating the game play so that a user can just click a startGame button which will go through the steps automatically without the user having to click next move. I am also working on a pop up that would allow the user to choose the size of the N-Puzzle. Lastly I am currently working on designing and implementing an algorithm to efficiently solve N-Puzzles of arbitrarily large size, something analogous to Simplified Memory Bounded A* search.
